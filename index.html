@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Care Chatbot Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage-glow glow-left" aria-hidden="true"></div>
+  <div class="stage-glow glow-right" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="app-header">
+      <div class="header-top">
+        <span class="live-pill">Skin Coach</span>
+      </div>
+      <h1>Skin Care Chatbot</h1>
+      <img
+        class="header-image"
+        src="OIP%20(15).png"
+        alt="Skin care product showcase"
+      />
+      <p class="subtitle">Ask a question and get a simple routine suggestion.</p>
+      <div class="tag-row">
+        <span class="tag">AM Routine</span>
+        <span class="tag">PM Routine</span>
+        <span class="tag">Sensitive Skin</span>
+      </div>
+    </header>
+
+    <section id="chatWindow" class="chat-window">
+      <div class="message messagediv message-ai">
+        <p>Hello! Ask me about your skin care routine and I can suggest a simple plan.</p>
+      </div>
+    </section>
+
+    <form id="chatForm" class="chat-form">
+      <label for="userInput" class="visually-hidden">Type your message</label>
+      <textarea
+        id="userInput"
+        rows="2"
+        placeholder="Example: I have dry skin. What should I use in the morning?"
+        required
+      ></textarea>
+      <button id="sendButton" type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="secret.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
