@@ -29,6 +29,21 @@
       </div>
     </header>
 
+    <section class="product-catalog" aria-label="Product selection">
+      <div class="product-catalog-head">
+        <h2>Select Products</h2>
+        <p>Click any product to select or unselect it.</p>
+      </div>
+      <div class="catalog-controls">
+        <label for="categoryFilter" class="catalog-filter-label">Category</label>
+        <select id="categoryFilter" class="catalog-filter" aria-label="Filter products by category">
+          <option value="none">Choose Category</option>
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+      <div id="productGrid" class="catalog-grid" role="listbox" aria-multiselectable="true"></div>
+    </section>
+
     <section id="chatWindow" class="chat-window">
       <div class="message messagediv message-ai">
         <p>Hello! Ask me about your skin care routine and I can suggest a simple plan.</p>
@@ -43,6 +58,7 @@
         placeholder="Example: I have dry skin. What should I use in the morning?"
         required
       ></textarea>
+      <div id="selectedProductsSummary" class="selected-products-summary" aria-live="polite"></div>
       <button id="sendButton" type="submit">Send</button>
     </form>
   </main>
